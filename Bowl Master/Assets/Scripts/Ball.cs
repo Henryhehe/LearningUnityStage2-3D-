@@ -3,15 +3,16 @@ using System.Collections;
 
 public class Ball : MonoBehaviour {
 
-	private float velocity = 2000;
+	public bool inPlay = false; 
+
 	private Rigidbody ballRigidBody;
 	private AudioSource audioSource;
+	private Vector3 startPosition;
 	// Use this for initialization
 	void Start () {
-
 	ballRigidBody = GetComponent<Rigidbody>();
-	Vector3 ballVelocity = new Vector3(0,0,velocity);
 	ballRigidBody.useGravity = false;
+	startPosition = GetComponent<Transform>().position;
 //	Launch(ballVelocity);
 	}
 	
@@ -25,6 +26,14 @@ public class Ball : MonoBehaviour {
 	audioSource.Play();
 	ballRigidBody.useGravity = true;
 	ballRigidBody.velocity = velocity;
+	inPlay = true;
 	}
-
+	public void reset() {
+	print("pin reset");
+	inPlay = false;
+	ballRigidBody.useGravity = false;
+	ballRigidBody.velocity = Vector3.zero;
+	ballRigidBody.angularVelocity = Vector3.zero;
+	ballRigidBody.position = startPosition;
+	}
 }

@@ -8,7 +8,7 @@ public class DragLaunch : MonoBehaviour {
 	private float dragTimeStart,dragTimeEnd;
 	private float dragSpeed;
 	private Vector3 dragPostionStart,dragPositionEnd;
-	private bool isLaunched = false;
+//	private bool isLaunched = false;
 	private Vector3 ballPosition;
 	// Use this for initialization
 	void Start () {
@@ -33,14 +33,14 @@ public class DragLaunch : MonoBehaviour {
 		float launchSpeedZ = (dragPositionEnd.y - dragPostionStart.y) / dragDuration;
 		Vector3 launchVelocity = new Vector3 (launchSpeedX, 0, launchSpeedZ);
 		// Launch the bal
-		if (!isLaunched) {
+		if (!ball.inPlay) {
 			ball.Launch (launchVelocity);
-			isLaunched = true;
+//			isLaunched = true;
 		}	
 	}
 	public void MoveStart (float amount)
 	{
-		if (!isLaunched) {
+		if (!ball.inPlay) {
 			ball.transform.Translate(new Vector3(amount,0,0));
 		}
 	}
