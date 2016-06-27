@@ -20,6 +20,7 @@ public class Ball : MonoBehaviour {
 	void Update () {
 	
 	}
+
 	public void Launch (Vector3 velocity)
 	{
 	audioSource = GameObject.FindObjectOfType<AudioSource>();
@@ -28,6 +29,7 @@ public class Ball : MonoBehaviour {
 	ballRigidBody.velocity = velocity;
 	inPlay = true;
 	}
+
 	public void reset() {
 	print("pin reset");
 	inPlay = false;
@@ -35,5 +37,6 @@ public class Ball : MonoBehaviour {
 	ballRigidBody.velocity = Vector3.zero;
 	ballRigidBody.angularVelocity = Vector3.zero;
 	ballRigidBody.position = startPosition;
+	transform.rotation = Quaternion.identity;
 	}
 }
