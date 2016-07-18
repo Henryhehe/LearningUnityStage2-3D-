@@ -12,17 +12,18 @@ public class DirectionalLock : Lock {
 
 	private bool isReset;
 
-	public DirectionalLock ()
+	public DirectionalLock (string code)
 	{
 		// we should probably stop using the magic number here 
 		trialNum = 9999;
 		isReset = true;
+		isUnlocked = false;
+		codeDirections = code;
 		LockScreen = directionalLockScreen;
 	}
 
 	private void Reset ()
 	{
-
 		isReset = true;
 	}
 
@@ -38,8 +39,8 @@ public class DirectionalLock : Lock {
 			return false;
 		}
 	}
+// do we need this method to convert things around?
 	private int Translate(string code) {
-
 		return 1;
 	}
 }

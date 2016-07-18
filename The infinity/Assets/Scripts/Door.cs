@@ -29,11 +29,13 @@ public class Door : MonoBehaviour {
 //			SceneManager.LoadScene ("Room_1");
 //
 //	
-		if (theLockManager.isUnlocked())
-			SceneManager.LoadScene (destination);
-		else {
-
+	// this is a quick fix for the transition, in the future it may be easier to use the default lock as no Lock mark 
+		if (theLockManager) {
+			if (theLockManager.isUnlocked ())
+				SceneManager.LoadScene (destination);	
+		} else {
+				SceneManager.LoadScene (destination);	
 		}
-	}
 }
 
+}

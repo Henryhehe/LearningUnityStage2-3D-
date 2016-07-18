@@ -10,24 +10,35 @@ public class LockManager : MonoBehaviour {
 	
 	public GameObject key;
 	public string codeForNumberLock;
+	public string codeForDirectionalLock;
+	public string codeForDigitalLock;
 	public GameObject lockScreen;
 	public GameObject menu;
 
 
 	public Lock theLock;
-
+	private string lockTag;
+	private Collider playerCollider;
 	// Use this for initialization
 	void Start ()
 	{
-		if (gameObject.tag == "KeyLock") {
-			// for the test purpose, this is the key lock test. 
-//			Debug.Log ("this is a KeyLock,create the Lock Object sucessfully based on the tag");
+		lockTag = gameObject.tag; 
+		switch (lockTag) {
+		case "KeyLock":
 			theLock = new KeyLock (key);
-//			print (theLock.trialNum);
-		}
-		if (gameObject.tag == "NumberLock") {
+			break;
+		case "NumberLock":
 			Debug.Log ("this is a number lock, create the lock obeject susccessfully based on the tag");
-			theLock = new NumberLock(codeForNumberLock);
+			theLock = new NumberLock (codeForNumberLock);
+			break;
+		case "DirectionalLock":
+			Debug.Log ("this is a directional lock, create the lock obeject susccessfully based on the tag");
+			theLock = new DirectionalLock(codeForDirectionalLock);
+			break;
+		default:
+			Debug.Log ("This lock has been assigned a tag, a default lock is created");
+			theLock = new Lock();
+			break;
 		}
 	}
 	// Update is called once per frame
@@ -40,19 +51,29 @@ public class LockManager : MonoBehaviour {
 	// the door calls the lockManager and the lock Manager calls the Lock object
 	void OnTriggerEnter (Collider collider)
 	{
+		Debug.Log(collider.gameObject);
 		Debug.Log ("somebody trying to unlock this lock?!");
-		if (gameObject.tag == "NumberLock") {
-				Debug.Log("is thue numberLock panel working here");
-				collider.GetComponent<FirstPersonController>().enabled = false;
-				EnableMenu();
+		if (gameObject.tag == "NumberLock" && !theLock.isUnlocked) {
+			Debug.Log ("is the numberLock panel working here");
+			PanelMode(collider);
 //				menu.GetComponentInChildren<NumberLockPanel>().enabled = true;
+		}
+//		case where it is a directional lock
+		if (gameObject.tag == "DirectionalLock" && !theLock.isUnlocked) {
+			Debug.Log("is the DirectionalLock panel working here");
+			PanelMode(collider);
 		}
 //		if (isUnlocked()) {
 //			Debug.Log (gameObject + "you have unlocked this lock");
 //		} else {
 //			Debug.Log("please keep trying");
 //		}
-
+	}
+// when the player leaves the door, the lock screen should be disabled
+	void OnTriggerExit (Collider collider)
+	{
+		lockScreen.SetActive(false);
+		collider.gameObject.GetComponent<FirstPersonController> ().enabled = true;
 	}
 
 //	void OnTriggerExit (Collider collider)
@@ -70,10 +91,12 @@ public class LockManager : MonoBehaviour {
 			return false;
 		}
 }
+
 // help method to help with enabling and disabling the screen.
 	void EnableMenu ()
 	{
 		menu.GetComponent<Canvas> ().enabled = true;
+		lockScreen.SetActive(true);
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
 	}
@@ -84,5 +107,9 @@ public class LockManager : MonoBehaviour {
 		Cursor.visible = false;
 		menu.GetComponent<Canvas> ().enabled = false;
 	}
-
+// method that allows the screen to switch to lock screen mode sucessfully.
+	void PanelMode(Collider collider) {
+		collider.gameObject.GetComponent<FirstPersonController> ().enabled = false;
+		EnableMenu ();
+	}
 }

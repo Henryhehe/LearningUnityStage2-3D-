@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/SplashScene.unity
+- path: Assets/_Scenes/DreamWorld.unity
   isLoaded: 1
   isActive: 1

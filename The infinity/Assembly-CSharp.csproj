@@ -69,7 +69,9 @@
      <Compile Include="Assets\Scripts\Items.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Locks\CodeManager.cs" />
+     <Compile Include="Assets\Scripts\Locks\DigitalLockPanel.cs" />
      <Compile Include="Assets\Scripts\Locks\DirectionalLock.cs" />
+     <Compile Include="Assets\Scripts\Locks\DirectionalLockPanel.cs" />
      <Compile Include="Assets\Scripts\Locks\ElectronicLock.cs" />
      <Compile Include="Assets\Scripts\Locks\KeyLock.cs" />
      <Compile Include="Assets\Scripts\Locks\LetterLock.cs" />
