@@ -29,3 +29,7 @@
 /Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll.mdb
 /Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll
 /Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll.mdb
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/Assembly-CSharp-Editor-firstpass.dll.mdb
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/Assembly-CSharp-Editor-firstpass.dll
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/obj/Debug/Assembly-CSharp-Editor-firstpass.dll
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/obj/Debug/Assembly-CSharp-Editor-firstpass.dll.mdb
