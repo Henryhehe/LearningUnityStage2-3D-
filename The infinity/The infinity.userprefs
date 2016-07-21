@@ -1,20 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManger.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerControl.cs" Line="38" Column="35" />
-      <File FileName="Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameManger.cs" Line="35" Column="1" />
-      <File FileName="Assets/Scripts/Door.cs" Line="32" Column="34" />
-      <File FileName="Assets/Scripts/LevelManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MusicPlayer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Items.cs" Line="3" Column="1" />
-      <File FileName="Assets/Scripts/Locks/NumberLockPanel.cs" Line="71" Column="21" />
+      <File FileName="Assets/Scripts/PlayerControl.cs" Line="46" Column="1" />
+      <File FileName="Assets/Scripts/Door.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/Locks/NumberLockPanel.cs" Line="14" Column="1" />
       <File FileName="Assets/Scripts/Locks/NumberLock.cs" Line="23" Column="3" />
-      <File FileName="Assets/Scripts/Locks/LockManager.cs" Line="46" Column="4" />
-      <File FileName="Assets/Scripts/Locks/DirectionalLock.cs" Line="38" Column="17" />
+      <File FileName="Assets/Scripts/Locks/LockManager.cs" Line="31" Column="44" />
+      <File FileName="Assets/Scripts/Locks/DirectionalLock.cs" Line="44" Column="8" />
       <File FileName="Assets/Scripts/Locks/Lock.cs" Line="25" Column="1" />
       <File FileName="Assets/Scripts/Locks/CodeManager.cs" Line="4" Column="8" />
+      <File FileName="Assets/Scripts/Locks/DirectionalLockPanel.cs" Line="56" Column="1" />
+      <File FileName="Assets/Scripts/GameManger.cs" Line="7" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

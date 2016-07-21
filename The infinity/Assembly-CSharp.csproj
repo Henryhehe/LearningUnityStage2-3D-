@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\Eyes.cs" />
      <Compile Include="Assets\Scripts\GameManger.cs" />
      <Compile Include="Assets\Scripts\Items.cs" />
+     <Compile Include="Assets\Scripts\ItemsScreen.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Locks\CodeManager.cs" />
      <Compile Include="Assets\Scripts\Locks\DigitalLockPanel.cs" />

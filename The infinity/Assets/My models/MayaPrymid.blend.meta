@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: bb3ff93de451d44b7988e4ef73b6397d
-timeCreated: 1467845735
+timeCreated: 1469126609
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -14,7 +14,7 @@ ModelImporter:
     9500000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 2
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
@@ -44,7 +44,7 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
