@@ -33,3 +33,8 @@
 /Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/Assembly-CSharp-Editor-firstpass.dll
 /Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/obj/Debug/Assembly-CSharp-Editor-firstpass.dll
 /Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/obj/Debug/Assembly-CSharp-Editor-firstpass.dll.mdb
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/LitJson.dll
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/Pathfinding.JsonFx.dll
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/Newtonsoft.Json.dll
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/System.Data.dll
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/System.Data.DataSetExtensions.dll

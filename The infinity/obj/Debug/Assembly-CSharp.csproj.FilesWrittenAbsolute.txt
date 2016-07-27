@@ -19,3 +19,8 @@
 /Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/Mono.Cecil.Mdb.dll
 /Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/GETween.dll
 /Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/GUIAnimatorFREE.dll
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/LitJson.dll
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/Pathfinding.JsonFx.dll
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/Newtonsoft.Json.dll
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/System.Data.dll
+/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Temp/bin/Debug/System.Data.DataSetExtensions.dll

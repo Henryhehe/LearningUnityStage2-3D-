@@ -1,0 +1,14 @@
+{
+		'table1' : [{
+		  'color': 'blue',
+          'index': 1,
+          'type': 'key',
+          'used': false
+        },{
+          'color': 'black',
+          'index': 2,
+          'type': 'shit',
+          'used': false
+        }
+        ]
+        }
