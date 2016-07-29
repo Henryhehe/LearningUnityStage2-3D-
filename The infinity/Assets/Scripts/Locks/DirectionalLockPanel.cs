@@ -30,7 +30,6 @@ public class DirectionalLockPanel : MonoBehaviour {
 				directionsButton.Add (child);
 			}
 		}
-			Debug.Log(directionsButton.Count);
 	}
 	
 	// Update is called once per frame

@@ -9,11 +9,19 @@
           'slug': 'key_blue'
         },{
           'color': 'black',
-          'index': 2,
-          'type': 'shit',
+          'index': 1,
+          'type': 'key',
           'used': true,
           'stackable': true,
-          'description': 'this is a black shit',
-          'slug' : 'shit_black'
+          'description': 'this is a black key',
+          'slug' : 'key_black'
+        },{
+          'color': 'yellow',
+          'index': 2,
+          'type': 'key',
+          'used': true,
+          'stackable': true,
+          'description': 'this is a yellow key',
+          'slug' : 'key_yellow'
         }
         ]

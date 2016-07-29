@@ -5,6 +5,7 @@ using System.Collections;
 public class PlayerControl : MonoBehaviour {
 
 	private GameObject itemsMenu;
+	public GameObject mainMenu;
 	private Camera eyes;
 	private FirstPersonController playerController;
 	private float defaultFov;
@@ -32,6 +33,7 @@ public class PlayerControl : MonoBehaviour {
 		if (Input.GetButtonUp ("Focus")) {
 			eyes.fieldOfView = defaultFov;
 		}
+	// this one should handle the situation while the player just press the button 
 		if (Input.GetButton ("Items")) {
 			EnableCavas ();
 		}
@@ -60,6 +62,7 @@ public class PlayerControl : MonoBehaviour {
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
 		itemsMenu.GetComponent<Canvas> ().enabled = true;
+		mainMenu.SetActive(true);
 	}
 
 	void DisableMenu ()
@@ -68,5 +71,6 @@ public class PlayerControl : MonoBehaviour {
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 		itemsMenu.GetComponent<Canvas> ().enabled = false;
+		mainMenu.SetActive(false);
 	}
 }

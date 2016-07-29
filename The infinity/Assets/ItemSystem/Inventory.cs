@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
+using Newtonsoft.Json;
 
 public class Inventory : JsonTest2 {
 
@@ -10,11 +11,12 @@ public class Inventory : JsonTest2 {
 	// back end representation and frontend representation 
 	public List<Staff> staffs = new List<Staff>();
 	public List<GameObject> slots = new List<GameObject>();
-
+	// which is actually the itemScreen
+	public GameObject inventoryPanel;
+	// which is the actual slot panel 
+	public GameObject slotPanel;
 
 	private const int slotAmount = 15;
-	private GameObject inventoryPanel;
-	private GameObject slotPanel;
 
 	void Start ()
 	{
@@ -23,8 +25,7 @@ public class Inventory : JsonTest2 {
 
 	public void CreateSlot ()
 	{
-		inventoryPanel = GameObject.Find ("ItemScreen");
-		slotPanel = inventoryPanel.transform.FindChild ("Slot Panel").gameObject;
+		
 		// create slot and add to the list as wekk
 		for (int i = 0; i < slotAmount; i++) {
 			GameObject slotToAdd = (GameObject)Instantiate (inventorySlot);
@@ -61,6 +62,8 @@ public class Inventory : JsonTest2 {
 					itemObject.GetComponent<Image> ().sprite = staffToAdd.sprite;
 					itemObject.name = staffToAdd.type;
 					itemObject.GetComponent<ItemData>().amount = 1;
+					// add to the json file 
+					AddToJson(staffToAdd);
 					// relative to the parent, and the parent is to it.
 					break;
 				}
@@ -68,8 +71,25 @@ public class Inventory : JsonTest2 {
 		}
 	}
 
+
 	private void AdjustUI(GameObject itemObject) {
 
 		itemObject.GetComponentInChildren<Text>().text = itemObject.GetComponent<ItemData>().amount.ToString();
+	}
+
+//TODO 
+//a seprate helper method to add staff into the json file, hence the path should be known, or delete
+
+	private void AddToJson (Staff staffToAdd)
+	{
+//		string json = JsonConvert.SerializeObject(staffToAdd, Formatting.Indented);
+//		Debug.Log(json);
+	}
+//TODO
+//another helper method to delete staff from the json file 
+
+	private void DeleteToJson(Staff staffToDelete) {
+
+
 	}
 }

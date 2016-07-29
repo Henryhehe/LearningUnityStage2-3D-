@@ -1,0 +1,17 @@
+[{
+  "color": "blue",
+  "index": 0,
+  "type": "key",
+  "used": true,
+  "description": "this is a blue key",
+  "stackable": false,
+  "slug": "key_blue"
+},{
+  "color": "black",
+  "index": 1,
+  "type": "key",
+  "used": true,
+  "description": "this is a black key",
+  "stackable": true,
+  "slug": "key_black"
+}]

@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -15,6 +16,7 @@ public class JsonTest2 : MonoBehaviour {
 	//TODO figure out this
 
 	public static List<Staff> dataList;
+	public static List<Staff> ItemList;
 
 	public Text informationText;
 	public Image informationImage;
@@ -33,21 +35,21 @@ public class JsonTest2 : MonoBehaviour {
 		inventory = GetComponent<Inventory>();
 		inventory.CreateSlot ();
 
-		inventory.addItem (2);
-		inventory.addItem (2);
-		inventory.addItem (2);
 		inventory.addItem (0);
+		inventory.addItem(1);
+
+		BuildToItemsList();
+		BuildFromTheItemList();
 
 		informationString = informationText.text;
 		SpriteToDisplay = " ";
 	}
-
+	// Update method for the sprite display and text display
 	void Update ()
 	{
 		if(informationText!= null) {
 		if (informationText.text!= informationString) {
 			informationText.text = informationString;
-			Debug.Log(informationString);
 		}
 		}
 		if(informationImage!=null ) {
@@ -72,14 +74,23 @@ public class JsonTest2 : MonoBehaviour {
 
 // the staff class that we're actually using 
 //[System.Serializable]
+[JsonObject]
 public class Staff {
+	[JsonProperty]
 	public string color { get; set; }
+	[JsonProperty]
 	public int index {get;set;}
+	[JsonProperty]
 	public string type { get; set;}
+	[JsonProperty]
 	public bool used { get; set; }
+	[JsonProperty]
 	public string description { get; set; }
+	[JsonProperty]
 	public bool stackable { get; set; }
+	[JsonProperty]
 	public string slug {get; set;}
+	[JsonIgnore]
 	public Sprite sprite { get; set; }
 
 	public Staff(string color, int index,string type, bool used, string descriptipn, bool stackable, string slug){
@@ -117,12 +128,20 @@ public class Staff {
           'slug': 'key_blue'
         },{
           'color': 'black',
-          'index': 2,
-          'type': 'shit',
+          'index': 1,
+          'type': 'key',
           'used': true,
           'stackable': true,
-          'description': 'this is a black shit',
-          'slug' : 'shit_black'
+          'description': 'this is a black key',
+          'slug' : 'key_black'
+        },{
+          'color': 'yellow',
+          'index': 2,
+          'type': 'key',
+          'used': true,
+          'stackable': true,
+          'description': 'this is a yellow key',
+          'slug' : 'key_yellow'
         }
         ]";
 		System.IO.File.WriteAllText(path,json);
@@ -140,6 +159,40 @@ public class Staff {
 		// deseriazlize to a list collection, can also be a dictionary
 		dataList = JsonConvert.DeserializeObject<List<Staff>> (readJson);
 		sr.Close ();
+	}
+	void BuildFromTheItemList() {
+		string path = Application.streamingAssetsPath + "/playerItems.json"; 
+		StreamReader sr = new StreamReader (path);
+		string readJson = sr.ReadToEnd ();
+		ItemList =  JsonConvert.DeserializeObject<List<Staff>> (readJson);
+		Debug.Log(ItemList[0].description);
+	}
+//TODO
+//method to build whatever the player has to a json file
+//we will need to have access to the staffs list
+	void BuildToItemsList ()
+	{
+		string path = Application.streamingAssetsPath + "/playerItems.json"; 
+		StringBuilder jsonTowrite = new StringBuilder ();
+		jsonTowrite.Append ("[");
+	
+		foreach (Staff staffToWrite in inventory.staffs) {
+			if (staffToWrite.index != -1) {
+				string json = JsonConvert.SerializeObject(staffToWrite, Formatting.Indented) + ",";
+				jsonTowrite.Append(json);
+			}
+		}
+		jsonTowrite.Length--;
+		jsonTowrite.Append("]");
+		string jsontoBuild = jsonTowrite.ToString();
+
+		System.IO.File.WriteAllText (path, jsontoBuild);
+	}
+//TODO 
+//method to delete whatever the player has used.
+	void CheckDeletion() {
+
+
 	}
 
 // this is the deserializing example, not sure which example it works on but it sure does 

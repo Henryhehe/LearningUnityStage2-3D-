@@ -69,7 +69,6 @@
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\Eyes.cs" />
      <Compile Include="Assets\Scripts\GameManger.cs" />
-     <Compile Include="Assets\Scripts\ItemsScreen.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Locks\CodeManager.cs" />
      <Compile Include="Assets\Scripts\Locks\DigitalLockPanel.cs" />
@@ -204,11 +203,11 @@
  <Reference Include="Newtonsoft.Json">
  <HintPath>/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Assets/Plugins/Newtonsoft.Json.dll</HintPath>
  </Reference>
- <Reference Include="System.Data">
- <HintPath>/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Assets/Plugins/System.Data.dll</HintPath>
- </Reference>
  <Reference Include="System.Data.DataSetExtensions">
  <HintPath>/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Assets/Plugins/System.Data.DataSetExtensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data">
+ <HintPath>/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Assets/Plugins/System.Data.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

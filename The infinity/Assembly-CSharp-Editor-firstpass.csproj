@@ -177,6 +177,12 @@
  <Reference Include="Newtonsoft.Json">
  <HintPath>/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Assets/Plugins/Newtonsoft.Json.dll</HintPath>
  </Reference>
+ <Reference Include="System.Data.DataSetExtensions">
+ <HintPath>/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Assets/Plugins/System.Data.DataSetExtensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data">
+ <HintPath>/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Assets/Plugins/System.Data.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -188,12 +194,6 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="System.Data">
- <HintPath>/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Assets/Plugins/System.Data.dll</HintPath>
- </Reference>
- <Reference Include="System.Data.DataSetExtensions">
- <HintPath>/Users/Hande/Desktop/Learning Unity/LearningUnity2/LearningUnityStage2-3D-/The infinity/Assets/Plugins/System.Data.DataSetExtensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
