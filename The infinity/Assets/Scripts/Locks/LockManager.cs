@@ -8,7 +8,7 @@ using System.Collections;
 //object has to offer
 public class LockManager : MonoBehaviour {
 	
-	public GameObject key;
+	public string key;
 	public string codeForNumberLock;
 	public string codeForDirectionalLock;
 	public string codeForDigitalLock;
@@ -51,17 +51,21 @@ public class LockManager : MonoBehaviour {
 	// the door calls the lockManager and the lock Manager calls the Lock object
 	void OnTriggerEnter (Collider collider)
 	{
-		Debug.Log(collider.gameObject);
+		Debug.Log (collider.gameObject);
 		Debug.Log ("somebody trying to unlock this lock?!");
 		if (gameObject.tag == "NumberLock" && !theLock.isUnlocked) {
 			Debug.Log ("is the numberLock panel working here");
-			PanelMode(collider);
+			PanelMode (collider);
 //				menu.GetComponentInChildren<NumberLockPanel>().enabled = true;
 		}
 //		case where it is a directional lock
 		if (gameObject.tag == "DirectionalLock" && !theLock.isUnlocked) {
-			Debug.Log("is the DirectionalLock panel working here");
-			PanelMode(collider);
+			Debug.Log ("is the DirectionalLock panel working here");
+			PanelMode (collider);
+		}
+		if (gameObject.tag == "KeyLock" && !theLock.isUnlocked) {
+			Debug.Log ("is the KeyLock panel working here");
+			PanelMode (collider);
 		}
 //		if (isUnlocked()) {
 //			Debug.Log (gameObject + "you have unlocked this lock");

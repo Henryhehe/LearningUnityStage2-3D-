@@ -44,7 +44,7 @@ public class JsonTest2 : MonoBehaviour {
 		informationString = informationText.text;
 		SpriteToDisplay = " ";
 	}
-	// Update method for the sprite display and text display
+	// Update method for the sprite display and text displayb
 	void Update ()
 	{
 		if(informationText!= null) {
