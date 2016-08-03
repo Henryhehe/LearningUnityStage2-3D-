@@ -116,6 +116,7 @@
 'Assets/Scripts/Locks/DirectionalLock.cs'
 'Assets/Scripts/Locks/DirectionalLockPanel.cs'
 'Assets/Scripts/Locks/ElectronicLock.cs'
+'Assets/Scripts/Locks/ElectronicLockPanel.cs'
 'Assets/Scripts/Locks/KeyLock.cs'
 'Assets/Scripts/Locks/KeyLockPanel.cs'
 'Assets/Scripts/Locks/LetterLock.cs'

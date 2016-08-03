@@ -11,7 +11,7 @@ public class LockManager : MonoBehaviour {
 	public string key;
 	public string codeForNumberLock;
 	public string codeForDirectionalLock;
-	public string codeForDigitalLock;
+	public string codeForElectronicLock;
 	public GameObject lockScreen;
 	public GameObject menu;
 
@@ -35,6 +35,10 @@ public class LockManager : MonoBehaviour {
 			Debug.Log ("this is a directional lock, create the lock obeject susccessfully based on the tag");
 			theLock = new DirectionalLock(codeForDirectionalLock);
 			break;
+		case "ElectronicLock":
+			Debug.Log("this is a ElectronicLock, create the lock obeject susccessfully based on the tag");
+			theLock = new ElectronicLock(codeForElectronicLock);
+			break;
 		default:
 			Debug.Log ("This lock has been assigned a tag, a default lock is created");
 			theLock = new Lock();
@@ -49,10 +53,13 @@ public class LockManager : MonoBehaviour {
 	// every time when it detectes a collision it will use the isUnlocked method to check whether the bool value in the Lock is true or not
 	// if so. it will enbale the lock and door.. but is it doing the same thing with the door? no because it is a different object call
 	// the door calls the lockManager and the lock Manager calls the Lock object
+//TODO
+//You can basically delete most of the codes here
 	void OnTriggerEnter (Collider collider)
 	{
 		Debug.Log (collider.gameObject);
 		Debug.Log ("somebody trying to unlock this lock?!");
+
 		if (gameObject.tag == "NumberLock" && !theLock.isUnlocked) {
 			Debug.Log ("is the numberLock panel working here");
 			PanelMode (collider);
@@ -65,6 +72,10 @@ public class LockManager : MonoBehaviour {
 		}
 		if (gameObject.tag == "KeyLock" && !theLock.isUnlocked) {
 			Debug.Log ("is the KeyLock panel working here");
+			PanelMode (collider);
+		}
+		if (gameObject.tag == "ElectronicLock" && !theLock.isUnlocked) {
+			Debug.Log ("is the ElectronicLock panel working here");
 			PanelMode (collider);
 		}
 //		if (isUnlocked()) {

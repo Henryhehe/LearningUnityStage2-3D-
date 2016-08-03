@@ -11,8 +11,9 @@ public class ElectronicLock : Lock {
 
 	private int lockOutSeconds;
 
-	public ElectronicLock() {
+	public ElectronicLock(string codeForElectronicLock) {
 
+		codeString = codeForElectronicLock;
 		trialNum = electronicLockTrialNum;
 		LockScreen = ElectronicLockScreen;
 	}
