@@ -90,6 +90,7 @@
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\PlayerPrefsManager.cs" />
      <Compile Include="Assets\Scripts\Record.cs" />
+     <Compile Include="Assets\Scripts\Rooms\RandomRoomGenerator.cs" />
      <Compile Include="Assets\Scripts\StartPoint.cs" />
      <Compile Include="Assets\UnityPackages\JsonNetSample\JsonNetSample.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
